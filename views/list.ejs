@@ -1,0 +1,25 @@
+<%- include('header.ejs'); %>
+<body>
+  <div class="box" id="heading">
+    <h1>It is <%= day %></h1> 
+  </div>
+   
+  <div class="box">
+      <% for(let i=0;i<newItems.length;i++){ %>
+      <div class="item">
+        <input type="checkbox" >
+        <p><%= newItems[i] %></p>
+      </div>
+
+    <% } %>
+ 
+ 
+  <form class="item" action="/" method="POST">
+    
+  <input type="text" name="newItem" placeholder="New Task" autocomplete="off">
+  <button type="submit" name="list" value= "<%= day %>" >+</button>
+</form>
+</div>  
+  
+</body>
+</html>
